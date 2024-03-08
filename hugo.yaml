@@ -1,0 +1,35 @@
+baseURL: https://liamgower.dev/
+languageCode: en-us
+title: Liam's Blog
+theme: ["PaperMod"]
+
+params:
+  homeInfoParams:
+    Title: Liam's Blog
+    Content: This is my space to share my knowledge and learnings across Data, Programming and Tech in general.
+
+  socialIcons:
+    - name: linkedin
+      url: "https://linkedin.com/in/liamgower"
+    - name: github
+      url: "https://github.com/leej11"
+
+menu:
+  main:
+    - identifier: categories
+      name: Categories
+      url: /categories/
+      weight: 10
+    - identifier: tags
+      name: Tags
+      url: /tags/
+      weight: 20
+    - identifier: archives
+      name: Archives
+      url: /archives/
+      weight: 30
+
+ShowBreadCrumbs: true
+ShowReadingTime: true
+ShowShareButtons: true
+ShowPostNavLinks: true
