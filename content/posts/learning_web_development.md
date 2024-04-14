@@ -1,6 +1,6 @@
 ---
-title: "I'm learning Web Development"
-date: 2024-04-14T09:57:31Z
+title: "Learning Web Development"
+date: 2024-04-14T10:51:18+01:00
 draft: false
 ---
 
