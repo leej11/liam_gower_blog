@@ -33,3 +33,7 @@ ShowBreadCrumbs: true
 ShowReadingTime: true
 ShowShareButtons: true
 ShowPostNavLinks: true
+
+services:
+  googleAnalytics:
+    ID: G-MEASUREMENT_ID
