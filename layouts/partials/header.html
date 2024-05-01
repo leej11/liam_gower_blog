@@ -40,6 +40,9 @@
 {{- end }}
 <head>
     {{ template "_internal/google_analytics.html" . }}
+    {{ if .Params.plotly }}
+        <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    {{ end }}
 </head>
 
 <header class="header">

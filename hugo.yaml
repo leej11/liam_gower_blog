@@ -2,6 +2,7 @@ baseURL: https://liamgower.dev/
 languageCode: en-us
 title: Liam's Blog
 theme: ["PaperMod"]
+enableEmoji: true
 
 params:
   homeInfoParams:
