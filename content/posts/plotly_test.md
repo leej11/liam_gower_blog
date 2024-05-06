@@ -3,6 +3,7 @@ title: "London Marathon Applicants vs. Entrants"
 date: 2024-04-30T16:19:47+01:00
 draft: false
 plotly: true
+tags: ["data", "hugo", "plotly", "Python"]
 ---
 
 I saw recently that there were [record numbers](https://www.bbc.co.uk/news/uk-england-london-68918984) applying for the London Marathon. I myself am part of the problem as I put my name down this year :scream:.
