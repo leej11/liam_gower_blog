@@ -2,6 +2,7 @@
 title: "Nottinghamshire Parkruns"
 date: 2024-08-05T15:38:00+01:00
 draft: false
+tags: ["parkrun", "Python", "data"]
 ---
 
 I have always wanted to know how many parkruns reside within my local county, Nottinghamshire.
