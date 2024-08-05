@@ -2,7 +2,7 @@
 title: "Learning Web Development"
 date: 2024-04-14T10:51:18+01:00
 draft: false
-tags: ["React", "Node", "Front-end", "Personal Update", "Evergreen"]
+tags: ["ReactJS", "Node", "Frontend", "Personal Update", "Evergreen"]
 ---
 
 ## What is this page?

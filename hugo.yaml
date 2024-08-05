@@ -15,6 +15,9 @@ params:
     - name: github
       url: "https://github.com/leej11"
 
+  assets:
+    favicon: "/assets/favicon.png"
+
 menu:
   main:
     - identifier: categories
@@ -38,3 +41,8 @@ ShowPostNavLinks: true
 services:
   googleAnalytics:
     ID: G-DCHHTM0TWR
+
+markup:
+  goldmark:
+    renderer:
+      unsafe: true

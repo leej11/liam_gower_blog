@@ -1,7 +1,8 @@
 ---
-title: "Learning Diary #1"
+title: "ReactJS Learning Diary #1"
 date: 2024-05-04T21:08:11+01:00
 draft: false
+tags: ["Strava", "Projects", "Learning Diary", "ReactJS"]
 ---
 
 {{< youtube rNWNQjvxC0k >}}
