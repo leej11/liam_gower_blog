@@ -9,7 +9,7 @@ Continuing my fun mapping my UK parkrun data, here is all the UK Counties mapped
 ### Parkrun UK County Completion
 
 <div style="width: 100%; height: 700px;">
-    <iframe src="/nottinghamshire-parkruns.html" width="100%" height="100%" style="border:none;"></iframe>
+    <iframe src="/parkrun_county_completion.html" width="100%" height="100%" style="border:none;"></iframe>
 </div>
 
 ### How I created this
