@@ -6,8 +6,6 @@ ShowReadingTime: true
 ShowLastMod: true
 ---
 
-<!-- {{< plotly_iframe >}} -->
-
 {{< png_grid >}}
 
 I'm continuing to explore and create new parkrun stats and charts for myself.

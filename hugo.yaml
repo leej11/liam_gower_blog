@@ -20,6 +20,10 @@ params:
 
 menu:
   main:
+    - identifier: parkrun
+      name: Parkrun
+      url: /parkrun/
+      weight: 5
     - identifier: categories
       name: Categories
       url: /categories/
@@ -46,3 +50,9 @@ markup:
   goldmark:
     renderer:
       unsafe: true
+
+frontmatter:
+  lastmod:
+    - :git
+
+enableGitInfo: true
