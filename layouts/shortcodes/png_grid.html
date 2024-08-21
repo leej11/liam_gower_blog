@@ -1,0 +1,12 @@
+{{ $files := readDir "static/donuts/" }}
+<div style="display: flex; justify-content: center; flex-wrap: wrap;">
+  {{ range $files }}
+    {{ if (findRE "_completion_donut.png$" .Name) }}
+      
+        <div>
+          <img src="/donuts/{{ .Name }}" style="border:none; width: 100%; height: auto;">
+        </div>
+    
+    {{ end }}
+  {{ end }}
+</div>
