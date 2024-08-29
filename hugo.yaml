@@ -7,13 +7,13 @@ enableEmoji: true
 params:
   homeInfoParams:
     Title: Liam's Blog
-    Content: This is my space to share my knowledge and learnings across Data, Programming and Tech in general.
+    Content: This is my space to share my knowledge and learnings across Data, Programming and Tech in general. <br> <br> The best place to reach me is my email liam.gower.dev@gmail.com
 
   socialIcons:
     - name: linkedin
       url: "https://linkedin.com/in/liamgower"
-    - name: github
-      url: "https://github.com/leej11"
+    - name: youtube
+      url: "https://www.youtube.com/@LiamCodesStuff"
 
   assets:
     favicon: "/assets/favicon.png"
