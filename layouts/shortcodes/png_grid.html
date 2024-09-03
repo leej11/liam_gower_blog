@@ -1,4 +1,4 @@
-{{ $files := readDir "static/donuts/" }}
+<!-- {{ $files := readDir "static/donuts/" }}
 <div style="display: flex; justify-content: center; flex-wrap: wrap;">
   {{ range $files }}
     {{ if (findRE "_completion_donut.png$" .Name) }}
@@ -8,5 +8,22 @@
         </div>
     
     {{ end }}
+  {{ end }}
+</div> -->
+
+{{ $folder := .Get "folder" }}
+{{ $files := readDir $folder }}
+{{ $i := 0 }} <!-- Initialize the counter -->
+<div style="display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; margin: 0px;">
+  {{ range $files }}
+  {{ if (findRE "_worldtopomap.png$" .Name) }}
+  {{ $i = add $i 1 }} <!-- Increment the counter -->
+  {{ $parts := split (replace .Name ".png" "") "_" }}
+  {{ $name := title (index $parts 1) }}
+  <figure style="margin: 0; padding: 0; width: 23%; flex: 0 1 auto;">
+    <img src="/{{ path.Base $folder }}/{{ .Name }}" style="border:none; width: 100%; height: auto; margin: 3px;">
+    <figcaption style="text-align: center; margin: 0; padding: 0;">#{{ $i }} {{ $name }}</figcaption>
+  </figure>
+  {{ end }}
   {{ end }}
 </div>

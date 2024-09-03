@@ -46,7 +46,7 @@
 </head>
 
 <header class="header">
-    <nav class="nav">
+    <nav class="nav {{ if .Params.widePost }}wide-post{{ end }}">
         <div class="logo">
             {{- $label_text := (site.Params.label.text | default site.Title) }}
             {{- if site.Title }}

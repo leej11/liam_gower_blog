@@ -57,3 +57,8 @@ This is perhaps just for myself, but I am going to note down a sort of list of t
 - [ ] Get a better understanding of hooks and context - [Net Ninja's Course](https://www.youtube.com/watch?v=6RhOzQciVwI&list=PL4cUxeGkcC9hNokByJilPg5g9m2APUePI&pp=iAQB)
 - [ ] Get a better understanding of how to do User Authentication - [Net Ninja's Course](https://www.youtube.com/watch?v=WsRBmwNkv3Q&list=PL4cUxeGkcC9g8OhpOZxNdhXggFz2lOuCT&pp=iAQB)
 - [ ] Figure out how to embed plots into React websites (e.g. I could put some stuff on this blog And/Or on my portfolio website)
+
+## Random Links
+
+- Learn CSS Flexbox: https://flexboxfroggy.com/
+- Learn CSS Grid: https://cssgridgarden.com/

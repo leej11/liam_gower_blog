@@ -37,6 +37,29 @@
     color: var(--content);
 }
 
+.main.wide-post {
+    max-width: 1200px !important;
+    /* Override with a new max-width */
+    margin: 0 auto;
+    /* Center the content */
+    padding: 0 20px;
+    /* Adjust padding if needed */
+}
+
+.wide-post .post-content {
+    max-width: 100% !important;
+    /* Ensure full width within the new .main width */
+    margin: 0 auto;
+}
+
+@media (max-width: 1200px) {
+    .wide-post {
+        max-width: 100% !important;
+        /* Fallback for smaller screens */
+    }
+
+}
+
 .post-content h3,
 .post-content h4,
 .post-content h5,
