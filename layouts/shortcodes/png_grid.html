@@ -5,12 +5,28 @@
   {{ range $files }}
   {{ if (findRE "_worldtopomap.png$" .Name) }}
   {{ $i = add $i 1 }} <!-- Increment the counter -->
+
+  <!-- Split the filename into parts -->
   {{ $parts := split (replace .Name ".png" "") "_" }}
-  {{ $name := title (index $parts 1) }}
+
+  <!-- Initialize an empty string to hold the middle parts -->
+  {{ $middleParts := "" }}
+
+  <!-- Loop through the parts starting from index 1 and stop before the last element -->
+  {{ range $index, $part := $parts }}
+  {{ if and (gt $index 0) (lt $index (sub (len $parts) 1)) }}
+  {{ $middleParts = printf "%s %s" $middleParts $part }} <!-- Concatenate the parts -->
+  {{ end }}
+  {{ end }}
+
+  <!-- Trim the spaces and capitalize the result -->
+  {{ $name := title (trim $middleParts " ") }}
+
   <figure style="margin: 0; padding: 0; width: 23%; flex: 0 1 auto;">
-    <img src="/{{ path.Base $folder }}/{{ .Name }}" style="border:none; width: 100%; height: auto; margin: 3px;">
+    <img src="/{{ path.Base $folder }}/{{ .Name }}" style="border:none; width: 100%; height: auto; margin: 3px;" loading="lazy">
     <figcaption style="text-align: center; margin: 0; padding: 0;">#{{ $i }} {{ $name }}</figcaption>
   </figure>
+
   {{ end }}
   {{ end }}
 </div>
