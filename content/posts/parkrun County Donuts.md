@@ -6,7 +6,7 @@ ShowReadingTime: true
 ShowLastMod: true
 ---
 
-{{< png_grid folder="static/donuts/" >}}
+{{< donut_grid folder="static/donuts/" >}}
 
 I'm continuing to explore and create new parkrun stats and charts for myself.
 
