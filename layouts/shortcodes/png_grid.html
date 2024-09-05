@@ -22,8 +22,8 @@
   <!-- Trim the spaces and capitalize the result -->
   {{ $name := title (trim $middleParts " ") }}
 
-  <figure style="margin: 0; padding: 0; width: 23%; flex: 0 1 auto;">
-    <img src="/{{ path.Base $folder }}/{{ .Name }}" style="border:none; width: 100%; height: auto; margin: 3px;" loading="lazy">
+  <figure style="margin: 0; padding: 0; width: 19%; flex: 0 1 auto;">
+    <img src="/{{ path.Base $folder }}/{{ .Name }}" style="border:none; width: 100%; height: auto; margin: 1px;" loading="lazy">
     <figcaption style="text-align: center; margin: 0; padding: 0;">#{{ $i }} {{ $name }}</figcaption>
   </figure>
 
