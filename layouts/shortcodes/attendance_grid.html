@@ -1,0 +1,91 @@
+{{ $attendance := getJSON "static/attendance/attendance.json" }}
+<div class="attendance-grid-wrapper">
+    <div class="attendance-grid">
+        {{ range $attendance }}
+        <div class="attendance-item" data-event="{{ .DateFormatted }}">
+            <div class="{{ .status }}">
+            </div>
+        </div>
+        {{ end }}
+    </div>
+</div>
+
+<style>
+    .attendance-grid {
+        display: grid;
+        grid-template-columns: repeat(13, 1fr);
+        /* Set 13 columns */
+        gap: 2px;
+    }
+
+    .attendance-item {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        /* Added relative positioning for the tooltip */
+        width: 50px;
+        /* Fixed width for the grid item */
+        height: 50px;
+        /* Fixed height for the grid item */
+    }
+
+    .attendance-item div {
+        width: 100%;
+        /* Take the full width of the parent */
+        height: 100%;
+        /* Take the full height of the parent */
+    }
+
+    /* Tooltip styling */
+    .attendance-item::after {
+        content: attr(data-event);
+        /* Use the data-event attribute for hover text */
+        position: absolute;
+        background-color: #333;
+        color: #fff;
+        padding: 5px;
+        border-radius: 5px;
+        white-space: nowrap;
+        top: -40px;
+        /* Position 40px above the .attendance-item */
+        left: 50%;
+        transform: translateX(-50%);
+        opacity: 0;
+        transition: opacity 0.3s ease-in-out;
+        pointer-events: none;
+        /* Prevents interaction */
+        font-size: 12px;
+        z-index: 10;
+        /* Ensure it's on top of other elements */
+    }
+
+    /* Show the tooltip on hover */
+    .attendance-item:hover::after {
+        opacity: 1;
+    }
+
+    /* Color settings for the inner div */
+    .attended {
+        background-color: #0cbfa3ff;
+        color: white;
+    }
+
+    .missed {
+        background-color: #f51b60ff;
+        color: white;
+    }
+
+    .future {
+        background-color: #2a3335;
+        color: black;
+    }
+
+    .attendance-grid-wrapper {
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        min-height: 100vh;
+        /* Full viewport height */
+    }
+</style>
