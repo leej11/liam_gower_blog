@@ -29,7 +29,7 @@ This was all in basic HTML and CSS. But it wasn't long before I was getting stuc
 
 So sadly, I didn't really touch web development for many years (naturally I was busy with university and full time jobs). Then about 1 month ago, I had a bit more time on my hands so finally got stuck in.
 
-## Learning Log _(last updated 14th April 2024)_
+## Learning Log _(last updated 27th February 2025)_
 
 I thought it might be useful for both myself but potentially others to document the steps I have taken thus far to learn the above.
 
@@ -48,17 +48,16 @@ I thought it might be useful for both myself but potentially others to document 
    - Now armed with some fundamental knowledge of the stack (MongoDB, React, Express, Node), I went through this course on and off for a period of 2 weeks (I have a fulltime job!)
    - This course takes you through building your own workout tracker where you can add, delete, update workouts and say how many reps you did, what kg you lifted, what exercise etc.
    - It is a great overview of full-stack web development.
-
-## Future Learning Log
-
-This is perhaps just for myself, but I am going to note down a sort of list of things I need to do / learn to progress forward.
-
-- [ ] Build a prototype of a full-stack website (I have an idea about EFL football stadiums...)
-- [ ] Get a better understanding of hooks and context - [Net Ninja's Course](https://www.youtube.com/watch?v=6RhOzQciVwI&list=PL4cUxeGkcC9hNokByJilPg5g9m2APUePI&pp=iAQB)
-- [ ] Get a better understanding of how to do User Authentication - [Net Ninja's Course](https://www.youtube.com/watch?v=WsRBmwNkv3Q&list=PL4cUxeGkcC9g8OhpOZxNdhXggFz2lOuCT&pp=iAQB)
-- [ ] Figure out how to embed plots into React websites (e.g. I could put some stuff on this blog And/Or on my portfolio website)
+6. [Introduction to Javascript [Codecademy]](https://www.codecademy.com/enrolled/courses/introduction-to-javascript)
+   - I realised this should have come first before studying ReactJS. I often found myself getting confused between vanilla JS syntax, and then
+     ReactJS syntax.
+   - This was a good intro to the basics, but it doesn't cover everything I feel like I need to know (e.g. async functions, promises and so on). That is what I will be studying next - "Intermediate Javascript" with Codecademy.
+7. [Intermediate Javascript [Codecademy]](https://www.codecademy.com/learn/learn-intermediate-javascript)
+   - This is what I am about to take next (_March 2025_)
 
 ## Random Links
 
-- Learn CSS Flexbox: https://flexboxfroggy.com/
-- Learn CSS Grid: https://cssgridgarden.com/
+- [Learn CSS Flexbox](https://flexboxfroggy.com/)
+- [Learn CSS Grid](https://cssgridgarden.com/)
+- [Full Stack Open](https://fullstackopen.com/)
+  - Looks like a great full stack introduction. I haven't gone through this but looks very good for someone starting from scratch.
