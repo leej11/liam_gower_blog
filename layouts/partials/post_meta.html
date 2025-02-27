@@ -6,7 +6,7 @@
 {{- end }}
 
 {{- if and (.Param "ShowLastMod") (not .Lastmod.IsZero) -}}
-{{- $scratch.Add "meta" (slice (printf "<span title='%s'>Last Updated: %s</span>" (.Lastmod) (.Lastmod.Format (default
+{{- $scratch.Add "meta" (slice (printf "<span title='%s'> Last Updated: %s</span>" (.Lastmod) (.Lastmod.Format (default
 "January 2, 2006" site.Params.DateFormat)))) }}
 {{- end }}
 
