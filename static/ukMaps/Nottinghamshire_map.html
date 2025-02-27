@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_42c4f59414a989ce32938bc466a9a54e {
+                    position: relative;
+                    width: 672.0px;
+                    height: 672.0px;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+        
+    
+                    <style>
+                        .foliumpopup {
+                            margin: auto;
+                        }
+                       .foliumpopup table{
+                            margin: auto;
+                        }
+                        .foliumpopup tr{
+                            text-align: left;
+                        }
+                        .foliumpopup th{
+                            padding: 2px; padding-right: 8px;
+                        }
+                    </style>
+            
+    <script src="https://cdn.jsdelivr.net/gh/marslan390/BeautifyMarker/leaflet-beautify-marker-icon.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/marslan390/BeautifyMarker/leaflet-beautify-marker-icon.min.css"/>
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_42c4f59414a989ce32938bc466a9a54e" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_42c4f59414a989ce32938bc466a9a54e = L.map(
+                "map_42c4f59414a989ce32938bc466a9a54e",
+                {
+                    center: [53.127865571043635, -1.0122111202809474],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 9,
+                    zoomControl: false,
+                    preferCanvas: false,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_3b1f879c3bed2763a60bc0ad8b64fc1e = L.tileLayer(
+                "https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png",
+                {"attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors \u0026copy; \u003ca href=\"https://carto.com/attributions\"\u003eCARTO\u003c/a\u003e", "detectRetina": false, "maxNativeZoom": 20, "maxZoom": 20, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abcd", "tms": false}
+            );
+        
+    
+            tile_layer_3b1f879c3bed2763a60bc0ad8b64fc1e.addTo(map_42c4f59414a989ce32938bc466a9a54e);
+        
+    
+        function geo_json_7f919ab5f4a9c7904524bbb26b356c3e_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"color": "#ffffff", "fillColor": "#41407bff", "fillOpacity": 0.2, "weight": 2};
+            }
+        }
+
+        function geo_json_7f919ab5f4a9c7904524bbb26b356c3e_onEachFeature(feature, layer) {
+            layer.on({
+                click: function(e) {
+                    if (typeof e.target.getBounds === 'function') {
+                        map_42c4f59414a989ce32938bc466a9a54e.fitBounds(e.target.getBounds());
+                    }
+                    else if (typeof e.target.getLatLng === 'function'){
+                        let zoom = map_42c4f59414a989ce32938bc466a9a54e.getZoom()
+                        zoom = zoom > 12 ? zoom : zoom + 1
+                        map_42c4f59414a989ce32938bc466a9a54e.flyTo(e.target.getLatLng(), zoom)
+                    }
+                }
+            });
+        };
+        var geo_json_7f919ab5f4a9c7904524bbb26b356c3e = L.geoJson(null, {
+                onEachFeature: geo_json_7f919ab5f4a9c7904524bbb26b356c3e_onEachFeature,
+            
+                style: geo_json_7f919ab5f4a9c7904524bbb26b356c3e_styler,
+        });
+
+        function geo_json_7f919ab5f4a9c7904524bbb26b356c3e_add (data) {
+            geo_json_7f919ab5f4a9c7904524bbb26b356c3e
+                .addData(data);
+        }
+            geo_json_7f919ab5f4a9c7904524bbb26b356c3e_add({"bbox": [-1.344430115824548, 52.789391354634475, -0.6665778551206011, 53.502495816170324], "features": [{"bbox": [-1.344430115824548, 52.789391354634475, -0.6665778551206011, 53.502495816170324], "geometry": {"coordinates": [[[-0.9162462492751495, 53.46027499533473], [-0.8719163736363451, 53.46629003194784], [-0.7974802340391889, 53.4550435000383], [-0.8205122442559158, 53.440726941709904], [-0.8180894448358821, 53.42695780861092], [-0.7886215678599967, 53.41524019829708], [-0.7771380181124538, 53.39689321300847], [-0.7904413667634785, 53.38583268656062], [-0.7752348671417195, 53.37773756456499], [-0.7911316213713927, 53.363530358475124], [-0.7744583660650982, 53.36441124785251], [-0.7586155396370158, 53.35381638573102], [-0.7664731505896536, 53.33008632025766], [-0.7499548225330644, 53.324197177144214], [-0.747137972081483, 53.30431208893263], [-0.750967236416914, 53.293581267457675], [-0.763502103448349, 53.299416460539064], [-0.7781253829701277, 53.28383316784527], [-0.76428010853944, 53.27271814318895], [-0.7770753987055365, 53.24688696482113], [-0.7350842533407874, 53.24385274955947], [-0.7341514588601591, 53.253982874318666], [-0.6880277088271515, 53.258370085552606], [-0.6665778551206011, 53.23968122563387], [-0.6758732235323512, 53.21762308205786], [-0.6976174272381281, 53.22021606890667], [-0.7147540151200579, 53.20758666797205], [-0.7305701401080263, 53.21073533878246], [-0.7640207044852327, 53.182554389792315], [-0.7181621634208466, 53.177266776086505], [-0.7153783257368581, 53.13686195029514], [-0.7324104954756029, 53.12778074216148], [-0.7167587660744931, 53.116163890174775], [-0.7296214199166172, 53.097881169485056], [-0.6951363140316108, 53.06626904336717], [-0.7134706567163577, 53.06602550990894], [-0.7162080923460717, 53.0590376588962], [-0.7495559335961673, 53.05509485839964], [-0.7608314231957751, 53.02938898806837], [-0.7884189572282152, 53.02583188507174], [-0.7958306469769719, 53.01057611927917], [-0.8040918192460607, 53.01248349324027], [-0.7782841710712703, 52.97690148843251], [-0.7961555453696552, 52.976709729972335], [-0.812856160906403, 52.95744280343998], [-0.8200271460343146, 52.960443028246914], [-0.8339136424052639, 52.94585933073413], [-0.8243656818659423, 52.94176840586069], [-0.8628976766772758, 52.91309292019586], [-0.8576378558377262, 52.9056213677761], [-0.9167802236738457, 52.878855017327744], [-0.9405688651596378, 52.87680859168169], [-0.9281267420293559, 52.866062447317695], [-0.9595022049266068, 52.843796870909074], [-0.9770805435194537, 52.84071686048371], [-0.9827157897295624, 52.82065418454534], [-1.0219399488130154, 52.8220310699716], [-1.0364017886735415, 52.81588014152744], [-1.0717450885508695, 52.813990406715604], [-1.0744420306110327, 52.824705670062315], [-1.116948105854229, 52.8195564945154], [-1.1308994683654752, 52.80580627663653], [-1.1632814359647317, 52.806501848836945], [-1.1977349578746923, 52.789391354634475], [-1.2258915386261027, 52.79165766825642], [-1.2345350092834337, 52.80208961341333], [-1.2619508460650637, 52.81042776899173], [-1.2743693548651402, 52.836110176189536], [-1.2678944956630596, 52.873349369051844], [-1.2400604138675864, 52.880089358870656], [-1.239710817330152, 52.892269781864925], [-1.2460933254380262, 52.902925726035164], [-1.281765530994714, 52.91025691592976], [-1.2810348284061037, 52.94913910674348], [-1.2925048449525713, 52.95555442673525], [-1.2877527450542063, 52.969643031896084], [-1.3074292641281335, 53.00360560417029], [-1.331920349963801, 53.03103537778905], [-1.335870920604037, 53.05294683299491], [-1.344430115824548, 53.06552349024033], [-1.3316376102823713, 53.080968613222815], [-1.3028850625284438, 53.08818302846016], [-1.3092534435573524, 53.09675088437883], [-1.3006209832278954, 53.10203019459977], [-1.3217819988549537, 53.13063109758047], [-1.3234599596211964, 53.16231427378365], [-1.290743872293663, 53.17140680431495], [-1.259927301685679, 53.164461183485265], [-1.2404476970596412, 53.17863225489286], [-1.1969636001059547, 53.18478875917039], [-1.2094146450338166, 53.217668046443315], [-1.202045022905249, 53.23552243845126], [-1.213028154005108, 53.2476522379716], [-1.2025220298253716, 53.261139070654465], [-1.1746913099659344, 53.26514378450034], [-1.1815430662428619, 53.27001087741031], [-1.1664887737494825, 53.277634524747384], [-1.1801183335973071, 53.28711341256783], [-1.176621880924756, 53.30510238790897], [-1.1997439593352661, 53.31141888193773], [-1.1387178594432616, 53.341363252666305], [-1.141007191005591, 53.34672815918005], [-1.156843304214342, 53.344949795492006], [-1.1626130900813676, 53.3568243317352], [-1.1385393530204642, 53.35588804487134], [-1.1460325975400005, 53.36902165867571], [-1.1305367154571277, 53.375551708678316], [-1.134607322869199, 53.39001202616123], [-1.1155789510060299, 53.3971661819724], [-1.1160405748490174, 53.407329767132474], [-1.080438882470746, 53.42684818611092], [-1.030948984239293, 53.43095951759494], [-1.0305145616237745, 53.42517527743638], [-1.0143457870697243, 53.426275358319984], [-0.9956684234444505, 53.43690646152466], [-0.9859762974977423, 53.47165293116306], [-0.9532560471979383, 53.484402884186075], [-0.935561158795882, 53.502495816170324], [-0.9004676577795128, 53.47513512380522], [-0.9202439486662785, 53.4654869615405], [-0.9162462492751495, 53.46027499533473]]], "type": "Polygon"}, "id": "57", "properties": {"completed_parkruns": 13.0, "completion_pct": 1.0, "completion_pct_fmtted": "100.0%", "name": "Nottinghamshire", "total_parkruns": 13.0}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+    geo_json_7f919ab5f4a9c7904524bbb26b356c3e.bindPopup(
+    function(layer){
+    let div = L.DomUtil.create('div');
+    
+    let handleObject = feature=>typeof(feature)=='object' ? JSON.stringify(feature) : feature;
+    let fields = ["name", "total_parkruns", "completed_parkruns", "completion_pct_fmtted"];
+    let aliases = ["County:", "Total Parkruns:", "Completed Parkruns:", "Completion %:"];
+    let table = '<table>' +
+        String(
+        fields.map(
+        (v,i)=>
+        `<tr>
+            <th>${aliases[i].toLocaleString()}</th>
+            
+            <td>${handleObject(layer.feature.properties[v]).toLocaleString()}</td>
+        </tr>`).join(''))
+    +'</table>';
+    div.innerHTML=table;
+    
+    return div
+    }
+    ,{"className": "foliumpopup"});
+                     
+    
+            geo_json_7f919ab5f4a9c7904524bbb26b356c3e.addTo(map_42c4f59414a989ce32938bc466a9a54e);
+        
+    
+            var marker_f9302f214beb3b511bc69f9f9e17f129 = L.marker(
+                [52.945171, -1.09786],
+                {}
+            ).addTo(map_42c4f59414a989ce32938bc466a9a54e);
+        
+    
+            var beautify_icon_4fcc12ee1eeddf9d6f60acfa312318fc = new L.BeautifyIcon.icon(
+                {"backgroundColor": "#00ceae", "borderColor": "#000", "borderWidth": 1, "icon": "check", "iconShape": "circle", "innerIconStyle": "", "isAlphaNumericIcon": false, "spin": false, "textColor": "#2c233d"}
+            )
+            marker_f9302f214beb3b511bc69f9f9e17f129.setIcon(beautify_icon_4fcc12ee1eeddf9d6f60acfa312318fc);
+        
+    
+            marker_f9302f214beb3b511bc69f9f9e17f129.bindTooltip(
+                `<div>
+                     Colwick<br># Runs: 4<br>Best Time: 28:14
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_0effb2b226c6eb581c79b721a65e0100 = L.marker(
+                [53.022132, -1.171188],
+                {}
+            ).addTo(map_42c4f59414a989ce32938bc466a9a54e);
+        
+    
+            var beautify_icon_a9c6bdaec0b0312969a701bd05e654e4 = new L.BeautifyIcon.icon(
+                {"backgroundColor": "#00ceae", "borderColor": "#000", "borderWidth": 1, "icon": "check", "iconShape": "circle", "innerIconStyle": "", "isAlphaNumericIcon": false, "spin": false, "textColor": "#2c233d"}
+            )
+            marker_0effb2b226c6eb581c79b721a65e0100.setIcon(beautify_icon_a9c6bdaec0b0312969a701bd05e654e4);
+        
+    
+            marker_0effb2b226c6eb581c79b721a65e0100.bindTooltip(
+                `<div>
+                     Bestwood Village<br># Runs: 3<br>Best Time: 28:46
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_9653d7997281ac5de4f396bb85abe624 = L.marker(
+                [53.174034, -1.183844],
+                {}
+            ).addTo(map_42c4f59414a989ce32938bc466a9a54e);
+        
+    
+            var beautify_icon_4ccada1997172382df34d3e12277cc1d = new L.BeautifyIcon.icon(
+                {"backgroundColor": "#00ceae", "borderColor": "#000", "borderWidth": 1, "icon": "check", "iconShape": "circle", "innerIconStyle": "", "isAlphaNumericIcon": false, "spin": false, "textColor": "#2c233d"}
+            )
+            marker_9653d7997281ac5de4f396bb85abe624.setIcon(beautify_icon_4ccada1997172382df34d3e12277cc1d);
+        
+    
+            marker_9653d7997281ac5de4f396bb85abe624.bindTooltip(
+                `<div>
+                     Mansfield<br># Runs: 1<br>Best Time: 27:43
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_30e1f4183025a3a0177c96f624a5e1d9 = L.marker(
+                [53.131155, -1.295214],
+                {}
+            ).addTo(map_42c4f59414a989ce32938bc466a9a54e);
+        
+    
+            var beautify_icon_74343ec406f1d820342471511675d041 = new L.BeautifyIcon.icon(
+                {"backgroundColor": "#00ceae", "borderColor": "#000", "borderWidth": 1, "icon": "check", "iconShape": "circle", "innerIconStyle": "", "isAlphaNumericIcon": false, "spin": false, "textColor": "#2c233d"}
+            )
+            marker_30e1f4183025a3a0177c96f624a5e1d9.setIcon(beautify_icon_74343ec406f1d820342471511675d041);
+        
+    
+            marker_30e1f4183025a3a0177c96f624a5e1d9.bindTooltip(
+                `<div>
+                     Brierley Forest<br># Runs: 1<br>Best Time: 26:48
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_0b50c14f41e9f906c84eb79340ecff3b = L.marker(
+                [52.882497, -1.149104],
+                {}
+            ).addTo(map_42c4f59414a989ce32938bc466a9a54e);
+        
+    
+            var beautify_icon_ec7fa7797ca836c8e2593d0b53c306eb = new L.BeautifyIcon.icon(
+                {"backgroundColor": "#00ceae", "borderColor": "#000", "borderWidth": 1, "icon": "check", "iconShape": "circle", "innerIconStyle": "", "isAlphaNumericIcon": false, "spin": false, "textColor": "#2c233d"}
+            )
+            marker_0b50c14f41e9f906c84eb79340ecff3b.setIcon(beautify_icon_ec7fa7797ca836c8e2593d0b53c306eb);
+        
+    
+            marker_0b50c14f41e9f906c84eb79340ecff3b.bindTooltip(
+                `<div>
+                     Rushcliffe<br># Runs: 7<br>Best Time: 25:59
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_a6efbba0ded6c723a7408b62478e4a55 = L.marker(
+                [52.965352, -1.159766],
+                {}
+            ).addTo(map_42c4f59414a989ce32938bc466a9a54e);
+        
+    
+            var beautify_icon_78d5a854d260f9724d7aa7d4bc499bd7 = new L.BeautifyIcon.icon(
+                {"backgroundColor": "#00ceae", "borderColor": "#000", "borderWidth": 1, "icon": "check", "iconShape": "circle", "innerIconStyle": "", "isAlphaNumericIcon": false, "spin": false, "textColor": "#2c233d"}
+            )
+            marker_a6efbba0ded6c723a7408b62478e4a55.setIcon(beautify_icon_78d5a854d260f9724d7aa7d4bc499bd7);
+        
+    
+            marker_a6efbba0ded6c723a7408b62478e4a55.bindTooltip(
+                `<div>
+                     Forest Rec<br># Runs: 3<br>Best Time: 27:04
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_8038a873c57175d9426bdfbf584e6e28 = L.marker(
+                [53.070031, -0.81905],
+                {}
+            ).addTo(map_42c4f59414a989ce32938bc466a9a54e);
+        
+    
+            var beautify_icon_824f719a180043822b81cffef27652e9 = new L.BeautifyIcon.icon(
+                {"backgroundColor": "#00ceae", "borderColor": "#000", "borderWidth": 1, "icon": "check", "iconShape": "circle", "innerIconStyle": "", "isAlphaNumericIcon": false, "spin": false, "textColor": "#2c233d"}
+            )
+            marker_8038a873c57175d9426bdfbf584e6e28.setIcon(beautify_icon_824f719a180043822b81cffef27652e9);
+        
+    
+            marker_8038a873c57175d9426bdfbf584e6e28.bindTooltip(
+                `<div>
+                     Newark<br># Runs: 1<br>Best Time: 26:35
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_3d731eb00974e2532a3facb8971a0757 = L.marker(
+                [53.268022, -1.065717],
+                {}
+            ).addTo(map_42c4f59414a989ce32938bc466a9a54e);
+        
+    
+            var beautify_icon_a11873b8482a24bd5fe9d649c9321f50 = new L.BeautifyIcon.icon(
+                {"backgroundColor": "#00ceae", "borderColor": "#000", "borderWidth": 1, "icon": "check", "iconShape": "circle", "innerIconStyle": "", "isAlphaNumericIcon": false, "spin": false, "textColor": "#2c233d"}
+            )
+            marker_3d731eb00974e2532a3facb8971a0757.setIcon(beautify_icon_a11873b8482a24bd5fe9d649c9321f50);
+        
+    
+            marker_3d731eb00974e2532a3facb8971a0757.bindTooltip(
+                `<div>
+                     Clumber Park<br># Runs: 1<br>Best Time: 26:57
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_e5e4f98982ced36cda843f7efc246a18 = L.marker(
+                [52.913592, -1.201737],
+                {}
+            ).addTo(map_42c4f59414a989ce32938bc466a9a54e);
+        
+    
+            var beautify_icon_514b44b25431a58898f4d15e2048558e = new L.BeautifyIcon.icon(
+                {"backgroundColor": "#00ceae", "borderColor": "#000", "borderWidth": 1, "icon": "check", "iconShape": "circle", "innerIconStyle": "", "isAlphaNumericIcon": false, "spin": false, "textColor": "#2c233d"}
+            )
+            marker_e5e4f98982ced36cda843f7efc246a18.setIcon(beautify_icon_514b44b25431a58898f4d15e2048558e);
+        
+    
+            marker_e5e4f98982ced36cda843f7efc246a18.bindTooltip(
+                `<div>
+                     Beeston<br># Runs: 1<br>Best Time: 26:05
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_64478efa7dbddf76a9226bd9840ce826 = L.marker(
+                [52.993919, -1.087124],
+                {}
+            ).addTo(map_42c4f59414a989ce32938bc466a9a54e);
+        
+    
+            var beautify_icon_93d45c0c681a4148d42f1cd871d65fc3 = new L.BeautifyIcon.icon(
+                {"backgroundColor": "#00ceae", "borderColor": "#000", "borderWidth": 1, "icon": "check", "iconShape": "circle", "innerIconStyle": "", "isAlphaNumericIcon": false, "spin": false, "textColor": "#2c233d"}
+            )
+            marker_64478efa7dbddf76a9226bd9840ce826.setIcon(beautify_icon_93d45c0c681a4148d42f1cd871d65fc3);
+        
+    
+            marker_64478efa7dbddf76a9226bd9840ce826.bindTooltip(
+                `<div>
+                     Gedling<br># Runs: 6<br>Best Time: 26:51
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_75f2db827d11622a3dacb9bdd8a99c0c = L.marker(
+                [53.165828, -1.084839],
+                {}
+            ).addTo(map_42c4f59414a989ce32938bc466a9a54e);
+        
+    
+            var beautify_icon_edad3853275defd2925e3f01e9171632 = new L.BeautifyIcon.icon(
+                {"backgroundColor": "#00ceae", "borderColor": "#000", "borderWidth": 1, "icon": "check", "iconShape": "circle", "innerIconStyle": "", "isAlphaNumericIcon": false, "spin": false, "textColor": "#2c233d"}
+            )
+            marker_75f2db827d11622a3dacb9bdd8a99c0c.setIcon(beautify_icon_edad3853275defd2925e3f01e9171632);
+        
+    
+            marker_75f2db827d11622a3dacb9bdd8a99c0c.bindTooltip(
+                `<div>
+                     Sherwood Pines<br># Runs: 1<br>Best Time: 26:50
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_6ae556bacaaa1840e5ac721f401312c3 = L.marker(
+                [52.907144, -1.163033],
+                {}
+            ).addTo(map_42c4f59414a989ce32938bc466a9a54e);
+        
+    
+            var beautify_icon_c2b0235ea2cf61d2ca262fb63e834667 = new L.BeautifyIcon.icon(
+                {"backgroundColor": "#00ceae", "borderColor": "#000", "borderWidth": 1, "icon": "check", "iconShape": "circle", "innerIconStyle": "", "isAlphaNumericIcon": false, "spin": false, "textColor": "#2c233d"}
+            )
+            marker_6ae556bacaaa1840e5ac721f401312c3.setIcon(beautify_icon_c2b0235ea2cf61d2ca262fb63e834667);
+        
+    
+            marker_6ae556bacaaa1840e5ac721f401312c3.bindTooltip(
+                `<div>
+                     Clifton<br># Runs: 1<br>Best Time: 28:52
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_ef7dd872ef322f8837662266bf4689e2 = L.marker(
+                [52.951893, -1.211018],
+                {}
+            ).addTo(map_42c4f59414a989ce32938bc466a9a54e);
+        
+    
+            var beautify_icon_c3430919a87c433c262ae8311f536c7a = new L.BeautifyIcon.icon(
+                {"backgroundColor": "#00ceae", "borderColor": "#000", "borderWidth": 1, "icon": "check", "iconShape": "circle", "innerIconStyle": "", "isAlphaNumericIcon": false, "spin": false, "textColor": "#2c233d"}
+            )
+            marker_ef7dd872ef322f8837662266bf4689e2.setIcon(beautify_icon_c3430919a87c433c262ae8311f536c7a);
+        
+    
+            marker_ef7dd872ef322f8837662266bf4689e2.bindTooltip(
+                `<div>
+                     Wollaton Hall<br># Runs: 6<br>Best Time: 26:48
+                 </div>`,
+                {"sticky": true}
+            );
+        
+</script>
+</html>
