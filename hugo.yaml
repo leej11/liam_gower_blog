@@ -41,6 +41,10 @@ menu:
       name: Evergreen
       url: posts/Evergreen/
       weight: 30
+    - identifier: Portfolio
+      name: Portfolio
+      url: posts/Portfolio/
+      weight: 40
 
 ShowBreadCrumbs: true
 ShowReadingTime: true
