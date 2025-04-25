@@ -18,23 +18,28 @@ params:
   assets:
     favicon: "/assets/favicon.png"
 
+  hideSummary: false
+
+taxonomies:
+  - category: categories
+
 menu:
   main:
-    - identifier: parkrun
-      name: Parkrun
-      url: /parkrun/
+    - identifier: blog
+      name: blog
+      url: posts/blog/
       weight: 5
-    - identifier: categories
-      name: Categories
-      url: /categories/
+    - identifier: parkrun
+      name: parkrun
+      url: posts/parkrun/
+      weight: 5
+    - identifier: Tutorials
+      name: Tutorials
+      url: posts/Tutorials/
       weight: 10
-    - identifier: tags
-      name: Tags
-      url: /tags/
-      weight: 20
-    - identifier: archives
-      name: Archives
-      url: /archives/
+    - identifier: Evergreen
+      name: Evergreen
+      url: posts/Evergreen/
       weight: 30
 
 ShowBreadCrumbs: true
@@ -56,3 +61,15 @@ frontmatter:
     - :git
 
 enableGitInfo: true
+
+markup:
+  goldmark:
+    parser:
+      attribute:
+        block: true
+    renderer:
+      unsafe: true
+  tableOfContents:
+    endLevel: 3
+    ordered: true
+    startLevel: 1
